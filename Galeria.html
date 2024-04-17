@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte</title>
+    <style>
+        /* Estilos generales */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        header, footer { background-color: #000; color: white; padding: 10px 0; text-align: center; }
+        nav { background: #444; padding: 10px 0; }
+        nav a { color: white; text-decoration: none; padding: 0 15px; }
+        nav a:hover { text-decoration: underline; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: space-between; }
+        .gallery img { width: 30%; margin-bottom: 15px; }
+
+
+        .container.gallery img {
+            width: 350px;
+            height: 350px;
+            transition: transform 0.3s ease; /* Transición de escala */
+        }
+
+        /* Efecto de escala al pasar el mouse sobre la imagen */
+        .container.gallery img:hover {
+            transform: scale(1.2); /* Escala aumentada */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Galería Artística</h1>
+</header>
+
+<nav>
+    <a href="Index.html">Inicio</a>
+    <a href="Galeria.html">Galería</a>
+    <a href="Contacto.html">Contacto</a>
+</nav>
+
+<div id="galeria" class="container gallery">
+    <!-- Aquí irían las imágenes de las artes, por ejemplo: -->
+    <img src="Arte2.png" alt="ART 1">
+    <img src="Arte3.png" alt="ART 2">
+    <img src="Arte4.png" alt="ART 3">
+    <img src="Arte5.png" alt="ART 4">
+    <img src="Arte6.png" alt="ART 5">
+    <img src="Arte7.png" alt="ART 6">
+        <!-- Asegúrate de reemplazar 'src' con las rutas correctas a tus imágenes -->
+</div>
+
+<footer>
+    <p>© 2024 Galería de Arte F.A</p>
+</footer>
+
+</body>
+</html>

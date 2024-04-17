@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte</title>
+    <style>
+        /* Estilos generales */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        header, footer { background-color: #000; color: white; padding: 10px 0; text-align: center; }
+        nav { background: #444; padding: 10px 0; }
+        nav a { color: white; text-decoration: none; padding: 0 15px; }
+        nav a:hover { text-decoration: underline; }
+        .gallery img { width: 30%; margin-bottom: 15px; }
+        .contact-form { width: 300px; margin: auto; }
+        .contact-form label, .contact-form input, .contact-form textarea, .contact-form select { display: block; width: 100%; margin-bottom: 10px; }
+        .contact-form input, .contact-form textarea { padding: 5px; }
+        .contact-form button { background-color: #5cb85c; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        .contact-form button:hover { background-color: #4cae4c; }
+
+        /* Estilo para el mensaje de solicitud enviada */
+        #mensaje-enviado {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none; /* Por defecto oculto */
+            margin-top: 10px; /* Margen superior añadido */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Galería Artística</h1>
+</header>
+<nav>
+    <a href="Index.html">Inicio</a>
+    <a href="Galeria.html">Galería</a>
+    <a href="Contacto.html">Contacto</a>
+</nav>
+<div id="contacto" class="container">
+    <h2>Contacto</h2>
+    <form class="contact-form" id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="tipo-solicitud">Tipo de solicitud:</label>
+        <select id="tipo-solicitud" name="tipo-solicitud" required>
+            <option value="Compra">Compra</option>
+            <option value="Consulta">Consulta</option>
+            <option value="Venta">Venta</option>
+        </select>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="mensaje-enviado">Solicitud enviada</div>
+    <p>Para más información, contáctenos:</p>
+    <p>Dirección: Calle de la Galería, 1234</p>
+    <p>Teléfono: 555-123-456</p>
+</div>
+<footer>
+    <p>© 2024 Galería de Arte F.A</p>
+</footer>
+<script>
+    // Obtener el formulario y el mensaje enviado
+    const form = document.getElementById('contactForm');
+    const mensajeEnviado = document.getElementById('mensaje-enviado');
+
+    // Agregar un evento de envío al formulario
+    form.addEventListener('submit', function (event) {
+        // Evitar el envío predeterminado del formulario
+        event.preventDefault();
+        // Mostrar el mensaje de solicitud enviada
+        mensajeEnviado.style.display = 'block';
+        // Reiniciar el formulario después de 3 segundos
+        setTimeout(function () {
+            form.reset();
+            mensajeEnviado.style.display = 'none';
+        }, 3000);
+    });
+</script>
+</body>
+</html>

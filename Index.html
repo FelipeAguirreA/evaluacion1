@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Establece un alto mínimo igual a la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1; /* Asegura que este contenedor ocupe el espacio restante */
+            text-align: left; /* Alinea el texto a la derecha */
+            max-width: 17%; /* Ajusta el ancho según sea necesario */
+            margin: 40px; /* Ajusta el margen según sea necesario */
+            padding: 100px; /* Ajusta el relleno según sea necesario */
+        }
+        header, footer {
+            background-color: #000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        nav {
+            background: #444;
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        #background-container { /* Estilo para el contenedor de la imagen de fondo */
+            position: fixed;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden; /* Para evitar barras de desplazamiento */
+        }
+        #background-container img {
+            width: 155vh;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Galería Artística</h1>
+</header>
+
+<nav>
+    <a href="Index.html">Inicio</a>
+    <a href="Galeria.html">Galería</a>
+    <a href="Contacto.html">Contacto</a>
+</nav>
+
+<!-- Contenedor de la imagen de fondo -->
+<div id="background-container">
+    <img src="Arte1.png" alt="Img Inicio">
+</div>
+
+<div class="container">
+    <h2>Bienvenidos a nuestra Galería de Arte</h2>
+    <p>Explora un universo de creatividad donde las imágenes cobran vida.</p>
+    <p>¡Sumérgete en la inspiración que solo el arte auténtico puede brindarte!</p>
+</div>
+
+<footer>
+    <p>© 2024 Galería de Arte F.A</p>
+</footer>
+
+</body>
+</html>
